@@ -1,7 +1,6 @@
 # Weather-Dashboard
 Week 8 Challenge
 
-cd WeDo an initial commit.
 Create a CSS file and a js file, make sure they link, then commit again.
 Check out the geocoding again AND there's a section about how to make a call using the city name - Anthony said soemthing about having to use 2 query URLs - you need to check the instructions in the weather API thing carefully.
 For the weather icons, Anthony is sending a link in Slack which will help us work out where to find them from the data response.

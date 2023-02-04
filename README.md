@@ -8,17 +8,15 @@ The second query would need to be nested within the function that contains the l
 The second query would need to have some sort of concatenation to include the lat and long information.
 Michal pointed out that we would actually need a third query, as the second one would be for the one day forecast, and the third one would be for the 5 day forecast.
 
-If you need a break, read the blog on API keys. Anthony sent this.
+If you need a break, read the blog on API keys. Anthony sent this and it's copied below.
 As you get to each new section, break it down further.
 Bear in mind that if you inspect the html, it's not as empty as it looks, I think the structure may possibly be there already. Use this to your advantage.
 
 
 FREQUENT TESTS, FREQUENT COMMITS!
-Work out a way of capturing the user input from the input box, using things like .val().trim() (check that, you didn't look it up!)
-Using example code from previous API exercises, create the correct URL for an API request such that when you type in London, you will get something returned that enables you (actually you to start with, the computer later!) to look up its lat and long.
-Using Ajax, and the correct first URL for API call 1, set up a function that will execute the call and return something.
-Interrogate what is returned, see if you can find the lat and long and console log them.
-Save the lat and longs as variables.
+Commit first ajax call.
+Work out why reponse.lat and reponse.lon are wrong, fix, test, commit.
+Commit.
 Using those variables, and concatenation, create your URL that will use these to allow the user to only enter the city name and the code does the work for them.
 Run the API call for one day data, see what that returns, just simple return for now, you can make it do more stuff later.
 Interrogate what is returned, look for where to find the data we need, which is the city name, the date, an icon representation of weather conditions (Anthony is sending a link in Slack which will help us work out where to find them from the data response), the temperature, the humidity, the wind speed.

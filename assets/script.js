@@ -29,18 +29,19 @@ $("#search-button").on("click", function(event) {
         url: queryURLGeo,
         method: "GET"
     }).then(function(response) {
-    //storing all variables we need taken from the data
+    //storing all variables we need to be taken from the data
     var cityName = response.city.name;
-    //do we really need this if we already have variable city?! Did it anyway.
-    var date = response.list[7].dt_txt;
-    var icon = response.list[1].weather[0].icon;
-    var temp = response.list[0].main.temp - 273.15;
+    //do we really need this if we already have variable city?! I did it anyway.
+    var date = response.list[0].dt_txt;
+    var icon = response.list[0].weather[0].icon;
+    var temp = (response.list[0].main.temp - 273.15).toFixed(0);
     var humidity = response.list[0].main.humidity;
-    var windSpeed = response.list[1].wind.speed;
+    var windSpeed = response.list[0].wind.speed;
 
     //testing variables
     console.log (cityName);
-    console.log (date);//shows tomorrow at 9 a.m., will need fixing later!
+    console.log (date);//shows tomorrow at 9 a.m., will need fixing later,
+    //or have you in fact got back the 5 day data?
     console.log (icon);//is targeted correctly, you just need to read AS advice
     console.log (temp);//needs rounding to 1 dp; you've done this before
     console.log (humidity);

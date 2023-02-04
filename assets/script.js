@@ -17,8 +17,8 @@ $("#search-button").on("click", function(event) {
     method: "GET"
   }).then(function(response) {
     //storing the latitude and longitude data
-    var lat = response.lat;//this must be wrong, needs fixing before continuing
-    var lon = response.lon;
+    var lat = response[0].lat;
+    var lon = response[0].lon;
 
     console.log (lat);
     console.log (lon);

@@ -33,6 +33,7 @@ Break down the function for 5 days of data as you did for the one day of data:
 See what that returns, just simple return for now, you can make it do more stuff later.
 Interrogate what is returned, look for where to find the data we need, which is the date, an icon, the temperature and the humidity.
 (You'll need to break this down further, but...) Do what we've done many times this week and work out how best to display this data for each of the next 4 or 5 days (4? - check the picture of what it's supposed to end up looking like), e.g. create a div, add text content, append it somewhere.
+Styling, including the search button.
  
 Should you create more empty html first or would that be added in as you're going through JavaScript? Think about that before launching into anything.
 

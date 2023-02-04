@@ -22,6 +22,9 @@ $("#search-button").on("click", function(event) {
 
     console.log (lat);
     console.log (lon);
+
+    var queryURLGeo = "http://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&appid=bb192fe9bf9d6707169935aa00429800";
+    console.log (queryURLGeo);
   
 })
 });

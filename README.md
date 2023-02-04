@@ -14,11 +14,14 @@ Bear in mind that if you inspect the html, it's not as empty as it looks, I thin
 
 
 FREQUENT TESTS, FREQUENT COMMITS!
-Using those variables, and concatenation, create your URL that will use these to allow the user to only enter the city name and the code does the work for them.
-Run the API call for one day data, see what that returns, just simple return for now, you can make it do more stuff later.
-Commit, coffee!
-Interrogate what is returned, look for where to find the data we need, which is the city name, the date, an icon representation of weather conditions (Anthony is sending a link in Slack which will help us work out where to find them from the data response), the temperature, the humidity, the wind speed.
+Commit to say you've done the second ajax, created all the variables and tested them, changed temp to C.
+Then tidy up THIS list and your code.
+Then mini-break to read what AS said about the icons (link in slack).
+Then look up rounding to 1 decimal place.
+
 (You'll need to break this down further, but...) Do what we've done many times this week and work out how best to display this data, e.g. create a div, add text content, append it somewhere. You could test this knowing you have to change it later into a proper display, or you could try to make it look like the example as you go along. Do whatever works best and is testable.
+BUT BEAR IN MIND THERE IS EMPTY HTML ALREADY SET UP
+
 Work out a way of also taking the userinput and it becoming a button below. We did something VERY similar earlier in the week with entering the name of a film into an input box then it became a button we could click on later.
 It will need to be a clickable button but this may not necessarily be the best point in the task to tackle that.
 Work out a way of storing those buttons (previous searches) into local storage. You managed this really successfully in Week 7 challenge so go there as a starting point.

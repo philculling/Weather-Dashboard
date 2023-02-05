@@ -9,16 +9,21 @@ As you get to each new section, break it down further.
 Bear in mind that if you inspect the html, it's not as empty as it looks, I think the structure may possibly be there already. Use this to your advantage.
 
 FREQUENT TESTS, FREQUENT COMMITS!
-Do something easy: add degrees C, % and KPH to the data being displayed.
-Then look at how Anthony would have used data attributes, etc.
-I think we might have to give it a data attribute and set its source (src) to the correct URL. but this is vague memory talking, you need to look it up!
-Commit: convert icon data from code to visual icon, update text display
-Before going on to the 5 day forecast, shall we make this a table?
-You could test this knowing you have to change it later into a proper display, or you could try to make it look like the example as you go along. Do whatever works best and is testable.
+The html for the 5-day forecast section is a section with id forecast. That's it.
+Maybe insert 5 Bootstrap cards?
+Look up Bootstrap cards.
+Coffee.
+If you do add cards, immediately commit.
 
-You will then need to repeat the above process for the 5-day forecast.
-Interrogate for 5 days of data as you did for the one day of data. Look for where to find the data we need, which is the date, an icon, the temperature and the humidity.
-(You'll need to break this down further, but...) Do what we've done many times this week and work out how best to display this data for each of the next 4 or 5 days (4? - check the picture of what it's supposed to end up looking like), e.g. create a div, add text content, append it somewhere.
+Repeat the process of getting data from API call to screen.
+Interrogate for 5 days of data as you did for the one day of data. Look for where to find the data we need, which is the date, an icon, the temperature and the humidity for the next 5 days.
+Work out how best to display this data for each of the next 5 days, e.g. create a div, add text content, append it somewhere.
+On this occasion it probably would be a good idea to use a table, or revise Bootstrap cards.
+
+Do a few things that hopefully will be relatively easy:
+- give the top div a border
+- make the search a button
+- change the date in the top div from not being taken from API, but from moment.js then you can format it the way you want
 
 Work out a way of also taking the userinput and it becoming a button below. We did something VERY similar earlier in the week with entering the name of a film into an input box then it became a button we could click on later. There is a div with the id history already set up for this.
 It will need to be a clickable button but this may not necessarily be the best point in the task to tackle that.
@@ -28,7 +33,7 @@ Work out a way that clicking on those buttons will run the function again.
 
 Do a little more work on the main function, so that when called it clears what was there and updates with the new search / city / userinput.
 
-See if you can adapt the way the date is displayed using moment.
+See if you can adapt the way the date is displayed using moment. Maybe instead of taking the dates from the API, we just use moment.js?
 Styling, including the search button.
 README.
  

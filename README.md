@@ -22,7 +22,7 @@ When the website is viewed, the user can search for a city. After entering the n
 Site is published at https://philculling.github.io/Weather-Dashboard 
 
 Screenshot:
-![Screenshot](./starter/assets/screenshot.png "Screenshot of Planner-App in progress")
+![Screenshot](./assets/Weatherdashboard.png "Screenshot of Weather-Dashboard in progress")
 
 ## Credits
 Some help was provided by a tutor session.
@@ -39,14 +39,11 @@ How to use the event listener on the buttons to update the content.
 Issues:
 1. The function will be almost the same, but the call to the API will be based on the button just clicked not the user input. I need to get this right first before adapting the VERY LONG function.
 2. Once sorted, adapt the function.
-When I want to clear, it's clearing #today but not #forecast and I don't understand why as they look the same.
-3. setItems is working fine, getItems is not, which is why it's commented out.
-Why is my styling not completely working? Although I used a workaround.
+3. When I want to clear, it's clearing #today but not #forecast and I don't understand why as they look the same.
+4. setItems is working fine, getItems is not, which is why it's commented out.
+5. Why is my styling not completely working? Although I used a workaround.
 
 FREQUENT TESTS, FREQUENT COMMITS!
-Commit done setItems but not getItems!
-Add screenshot.
-Commit again.
 
 UNRESOLVED ISSUES
 Clicking on the history buttons and it working ok.

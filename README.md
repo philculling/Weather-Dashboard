@@ -9,19 +9,31 @@ When I want to clear, it's clearing #today but not #forecast and I don't underst
 Why is my styling not completely working? Although I used a workaround.
 
 FREQUENT TESTS, FREQUENT COMMITS!
-Commit along the lines of clear #today, unsuccessful at clearing #forecast
-
 Work out a way that clicking on the history buttons will run the function again.
+
+Add an event listener to the buttons (that are not yet created).
+Need an event listener on each - sort of. The way Matthew showed me in last week's OR the way Laura showed the group.
+Using this.
+Test and commit.
+Make that event listener trigger a NEW function (that is almost identical to the first one).
+Create a simple function, test and commit.
+Copy over the first function, but give it a different name.
+Change where it gets its information from; that is previously it was taking it from user input, now it's taking it from the button clicked. Otherwise I think it will be the same.
 
 Check the API documentation in case Michal is right and it needs a separate query for 1 day and forecast. It shouldn't be too hard to change if it does.
 
 Work out a way of storing those buttons (previous searches) into local storage. You managed this really successfully in Week 7 challenge so go there as a starting point.
 
+Screenshot.
+Save screenshot to right place in assets.
+README, copy and edit from previous.
+README add screenshot.
+
 Styling:
 Look up how to add a border, as you may have forgotten!
 Give the top div a border.
 Make the search area more clearly a button.
-README.
+
  
 MY NOTES FINISH HERE
 

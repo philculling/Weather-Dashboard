@@ -186,6 +186,10 @@ $("#search-button").on("click", function(event) {
 })
 });
 
+$("#history").on('click', function (event) {
+      console.log("Testing event listener");
+});
+
  //Calling the renderButtons function to display the list of cities
  //that will be taken from local storage
  renderButtons();

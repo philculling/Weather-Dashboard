@@ -186,8 +186,25 @@ $("#search-button").on("click", function(event) {
 })
 });
 
+/*
+I am aiming in the following section for the user to be able to click 
+on the buttons in the history section, and for the code to run again,
+but using the value of what was clicked on this time, when previously
+it was the user input.
+But I'm getting v confused, going round in circles!
+Could we give each history button a data attribute, which is the city name
+then retrieve the city name using data attribute
+and run the function again using an updated city name?
+*/
 $("#history").on('click', function (event) {
-      console.log("Testing event listener");
+      console.log("Testing event listener");//works
+      $("#today").empty;
+      $("#todayPlusOne").empty;
+      $("#todayPlusTwo").empty;
+      $("#todayPlusThree").empty;
+      $("#todayPlusFour").empty;
+      $("#todayPlusFive").empty;//none of these is working
+
 });
 
  //Calling the renderButtons function to display the list of cities

@@ -5,14 +5,11 @@ If you need a break, read the blog on API keys. Anthony sent this and it's copie
 As you get to each new section, break it down further.
 
 Things to ask tutor:
+When I want to clear, it's clearing #today but not #forecast and I don't understand why as they look the same.
 Why is my styling not completely working? Although I used a workaround.
 
 FREQUENT TESTS, FREQUENT COMMITS!
-
-Work out a way of taking the userinput and it becoming a button below. We did something VERY similar earlier in the week with entering the name of a film into an input box then it became a button we could click on later. There is a div with the id history already set up for this.
-Commit and break.
-
-Do a little more work on the main function, so that when called it clears what was there and updates with the new search / city / userinput.
+Commit along the lines of clear #today, unsuccessful at clearing #forecast
 
 Work out a way that clicking on the history buttons will run the function again.
 

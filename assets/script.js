@@ -17,6 +17,18 @@ $("#search-button").on("click", function(event) {
     event.preventDefault();
     console.log ("my event listener code is correct");
     
+    //clear previous content at this point
+    $("#today").empty;
+    $("#todayPlusOne").empty;
+    $("#todayPlusTwo").empty;
+    $("#todayPlusThree").empty;
+    $("#todayPlusFour").empty;
+    $("#todayPlusFive").empty;
+    /*
+    Weird. Emptying #today works every time. Emptying the lower section is not,
+    whatever I'm trying, like by class card-body, or individually by section.
+    */
+    
   var city = $("#search-input").val().trim();
   console.log(city);
 
@@ -66,7 +78,7 @@ $("#search-button").on("click", function(event) {
     console.log (temp);
     console.log (humidity);
     console.log (windSpeed);
-
+    
     //create variable for current date using moment.js as I want to display it differently.
     var today = moment();
     $("#today").text(today.format("DD/MM/YY"));
@@ -98,6 +110,7 @@ $("#search-button").on("click", function(event) {
     iconDisplaytodayPlusOne.attr("src",iconURLtodayPlusOne);
 
     //add date, icon and data to correct box day 1 (need to create id first)
+    $("#todayPlusOne").empty;
     $("#todayPlusOne").append(todayPlusOne);
     $("#todayPlusOne").append(iconDisplaytodayPlusOne);
     $("#todayPlusOne").append("Temperature: " + temptodayPlusOne + "°C" + "<br/>" 
@@ -113,6 +126,7 @@ $("#search-button").on("click", function(event) {
     iconDisplaytodayPlusTwo.attr("src",iconURLtodayPlusTwo);
     
     //add date, icon and data to correct box day 2
+    $("#todayPlusTwo").empty;
     $("#todayPlusTwo").append(todayPlusTwo);
     $("#todayPlusTwo").append(iconDisplaytodayPlusTwo);
     $("#todayPlusTwo").append("Temperature: " + temptodayPlusTwo + "°C" + "<br/>" 
@@ -128,6 +142,7 @@ $("#search-button").on("click", function(event) {
     iconDisplaytodayPlusThree.attr("src",iconURLtodayPlusThree);
     
     //add date, icon and data to correct box day 3
+    $("#todayPlusThree").empty;
     $("#todayPlusThree").append(todayPlusThree);
     $("#todayPlusThree").append(iconDisplaytodayPlusThree);
     $("#todayPlusThree").append("Temperature: " + temptodayPlusThree + "°C" + "<br/>" 
@@ -143,6 +158,7 @@ $("#search-button").on("click", function(event) {
     iconDisplaytodayPlusFour.attr("src",iconURLtodayPlusFour);
 
      //add date, icon and data to correct box day 4
+     $("#todayPlusFour").empty;
      $("#todayPlusFour").append(todayPlusFour);
      $("#todayPlusFour").append(iconDisplaytodayPlusFour);
      $("#todayPlusFour").append("Temperature: " + temptodayPlusFour + "°C" + "<br/>" 
@@ -159,6 +175,7 @@ $("#search-button").on("click", function(event) {
     iconDisplaytodayPlusFive.attr("src",iconURLtodayPlusFive);
 
      //add date, icon and data to correct box day 5
+     $("#todayPlusFive").empty;
      $("#todayPlusFive").append(todayPlusFive);
      $("#todayPlusFive").append(iconDisplaytodayPlusFive);
      $("#todayPlusFive").append("Temperature: " + temptodayPlusFive + "°C" + "<br/>" 

@@ -46,12 +46,14 @@ Issues:
 FREQUENT TESTS, FREQUENT COMMITS!
 
 UNRESOLVED ISSUES
+Think about the clearing bit and why that's not working
+
+Think more about what you need the function to do - the one where you click on the history buttons.
 Devising a function for clicking on the history buttons and a correct, adapted function being called which works.
 Function getItems to take the array back from local storage.
 Make sure getItems is triggered when it needs to be.
 Styling:
 Look up how to add a border, as you may have forgotten!
 Give the top div a border.
-Make the search area more clearly a button.
 
 MY NOTES FINISH HERE

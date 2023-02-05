@@ -5,19 +5,23 @@ var cities = [];
 function setItems() {
   localStorage.setItem("mostRecentArray", cities);
 }
+//The array, cities, as it stands, should now be stored in local storage.
 console.log(cities);
 
-/*
-var mostRecentArray = localStorage.getItem("mostRecentArray");
 
+var mostRecentArray = localStorage.getItem("mostRecentArray");
+console.log(mostRecentArray);
+
+/*
 getItems();
 
 function getItems() {
 cities = mostRecentArray;
 }
 
-//hoping that would update the locally stored most recent array to our
-//cities array, but it wasn't working in the way I expected
+I was hoping that would update the locally stored most recent array to our
+cities array, but it wasn't working in the way I expected. Is it because
+what we're saving is an array; do we need to parse / stringify?
 */
 
 function renderButtons() {
@@ -199,7 +203,7 @@ $("#search-button").on("click", function(event) {
      $("#todayPlusFive").append("Temperature: " + temptodayPlusFive + "°C" + "<br/>" 
      + "Humidity: " + humiditytodayPlusFive + "%");
      $("#todayPlusFive").css("background-color", "aquamarine");
-             
+         
     })
 })
 });

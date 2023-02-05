@@ -86,6 +86,7 @@ $("#search-button").on("click", function(event) {
     $("#todayPlusOne").append(iconDisplaytodayPlusOne);
     $("#todayPlusOne").append("Temperature: " + temptodayPlusOne + "°C" + "<br/>" 
     + "Humidity: " + humiditytodayPlusOne + "%");
+    $("#todayPlusOne").css("background-color", "aquamarine");
         
     //variables for forecast day 2
     var icontodayPlusTwo = response.list[15].weather[0].icon;
@@ -100,7 +101,8 @@ $("#search-button").on("click", function(event) {
     $("#todayPlusTwo").append(iconDisplaytodayPlusTwo);
     $("#todayPlusTwo").append("Temperature: " + temptodayPlusTwo + "°C" + "<br/>" 
     + "Humidity: " + humiditytodayPlusTwo + "%");
-        
+    $("#todayPlusTwo").css("background-color", "aquamarine");
+
     //variables for forecast day 3
     var icontodayPlusThree = response.list[23].weather[0].icon;
     var temptodayPlusThree = (response.list[23].main.temp - 273.15).toFixed(0);
@@ -114,6 +116,7 @@ $("#search-button").on("click", function(event) {
     $("#todayPlusThree").append(iconDisplaytodayPlusThree);
     $("#todayPlusThree").append("Temperature: " + temptodayPlusThree + "°C" + "<br/>" 
     + "Humidity: " + humiditytodayPlusThree + "%");
+    $("#todayPlusThree").css("background-color", "aquamarine");
         
     //variables for forecast day 4
     var icontodayPlusFour = response.list[31].weather[0].icon;
@@ -128,6 +131,7 @@ $("#search-button").on("click", function(event) {
      $("#todayPlusFour").append(iconDisplaytodayPlusFour);
      $("#todayPlusFour").append("Temperature: " + temptodayPlusFour + "°C" + "<br/>" 
      + "Humidity: " + humiditytodayPlusFour + "%");
+     $("#todayPlusFour").css("background-color", "aquamarine");
          
     //variables for forecast day 5
 
@@ -143,6 +147,7 @@ $("#search-button").on("click", function(event) {
      $("#todayPlusFive").append(iconDisplaytodayPlusFive);
      $("#todayPlusFive").append("Temperature: " + temptodayPlusFive + "°C" + "<br/>" 
      + "Humidity: " + humiditytodayPlusFive + "%");
+     $("#todayPlusFive").css("background-color", "aquamarine");
              
     })
 })

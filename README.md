@@ -4,12 +4,13 @@ Week 8 Challenge
 If you need a break, read the blog on API keys. Anthony sent this and it's copied below.
 As you get to each new section, break it down further.
 
+Things to ask tutor:
+Why is my styling not completely working? Although I used a workaround.
+
 FREQUENT TESTS, FREQUENT COMMITS!
-Commit.
-Do a tiny bit of styling, then commit.
-Give them all a background color because at the moment, you can't see the icons very clearly.
 Give the top div a border.
 Make the search a button.
+Commit.
 
 Work out a way of also taking the userinput and it becoming a button below. We did something VERY similar earlier in the week with entering the name of a film into an input box then it became a button we could click on later. There is a div with the id history already set up for this.
 It will need to be a clickable button but this may not necessarily be the best point in the task to tackle that.

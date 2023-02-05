@@ -9,10 +9,6 @@ As you get to each new section, break it down further.
 Bear in mind that if you inspect the html, it's not as empty as it looks, I think the structure may possibly be there already. Use this to your advantage.
 
 FREQUENT TESTS, FREQUENT COMMITS!
-Commit: changed date from being taken from API to using moment so we can display in correct format
-Using moment.js, create variables for dates of the next 5 days.
-Test by console logging. It it's worked, commit again.
-
 Repeat the process of getting data from API call to screen.
 Interrogate for 5 days of data as you did for the one day of data. Look for where to find the data we need, which is the date (hopefully not if you're going to use moment), an icon, the temperature and the humidity for the next 5 days.
 Work out how best to display this data for each of the next 5 days, e.g., maybe, give those cards you created ids, add text content, append.

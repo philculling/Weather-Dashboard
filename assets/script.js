@@ -36,6 +36,14 @@ $("#search-button").on("click", function(event) {
     //create variable for current date using moment.js as I want to display it differently.
     var today = moment();
     $("#today").text(today.format("DD/MM/YY"));
+    //create date variables for next 5 days
+    var todayPlusOne = moment().add(1, 'days').format("DD/MM/YY");
+    //test
+    console.log (todayPlusOne);//worked fine, displayed tomorrow's date
+    var todayPlusTwo = moment().add(2, 'days').format("DD/MM/YY");
+    var todayPlusThree = moment().add(3, 'days').format("DD/MM/YY");
+    var todayPlusFour = moment().add(4, 'days').format("DD/MM/YY");
+    var todayPlusFive = moment().add(5, 'days').format("DD/MM/YY");
 
     var icon = response.list[0].weather[0].icon;
     var temp = (response.list[0].main.temp - 273.15).toFixed(0);

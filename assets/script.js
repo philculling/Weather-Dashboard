@@ -40,13 +40,22 @@ $("#search-button").on("click", function(event) {
 
     //testing variables
     console.log (cityName);
-    console.log (date);//shows tomorrow at 9 a.m., will need fixing later,
-    //or have you in fact got back the 5 day data?
-    console.log (icon);//is targeted correctly, you just need to read AS advice
-    console.log (temp);//needs rounding to 1 dp; you've done this before
+    console.log (date);
+    console.log (icon);
+    /*
+    I nearly cracked this before it was time to go.
+    See the website. It has a url that includes the code for the icon within it.
+    I think you need to create another variable called something like
+    iconURL, which you create by concatenating part of that url from their
+    website and insering variable icon into it?
+    */
+    console.log (temp);
     console.log (humidity);
     console.log (windSpeed);
 
+    $("#today").append(cityName + " " + date + " " + icon + "<br/>" + "Temperature: "
+     + temp + "<br/>" + "Humidity: " + humidity + "<br/>" + "Wind Speed: " + windSpeed);
+    
     })
 })
 });

@@ -8,16 +8,14 @@ If you need a break, read the blog on API keys. Anthony sent this and it's copie
 As you get to each new section, break it down further.
 Bear in mind that if you inspect the html, it's not as empty as it looks, I think the structure may possibly be there already. Use this to your advantage.
 
-
 FREQUENT TESTS, FREQUENT COMMITS!
-11:35 (on alarm, when time to go): commit everything done so far. Last thing you did was to round the temperature to nearest integer, correct some data retrieval.
-Then mini-break to read what AS said about the icons (link in slack).
-
-(You'll need to break this down further, but...) Do what we've done many times this week and work out how best to display this data. There is a place in the html where this is going, it's got id today.
-Create a div to store it, add text content, append it somewhere in the div already there with id today.
+Commit.
+Sort icon issue.
+Commit.
+As part of this you'll also need to work on converting the icon from what is now just a 3 digit code, into an icon by retrieving its URL. I think we might have to give it a data attribute and set its source (src) to the correct URL. but this is vague memory talking, you need to look it up!
 You could test this knowing you have to change it later into a proper display, or you could try to make it look like the example as you go along. Do whatever works best and is testable.
 
-You will then need to repeat the above process forthe 5-day forecast.
+You will then need to repeat the above process for the 5-day forecast.
 
 Work out a way of also taking the userinput and it becoming a button below. We did something VERY similar earlier in the week with entering the name of a film into an input box then it became a button we could click on later. There is a div with the id history already set up for this.
 It will need to be a clickable button but this may not necessarily be the best point in the task to tackle that.
@@ -29,6 +27,7 @@ Break down the function for 5 days of data as you did for the one day of data:
 See what that returns, just simple return for now, you can make it do more stuff later.
 Interrogate what is returned, look for where to find the data we need, which is the date, an icon, the temperature and the humidity.
 (You'll need to break this down further, but...) Do what we've done many times this week and work out how best to display this data for each of the next 4 or 5 days (4? - check the picture of what it's supposed to end up looking like), e.g. create a div, add text content, append it somewhere.
+See if you can adapt the way the date is displayed using moment.
 Styling, including the search button.
  
 MY NOTES FINISH HERE

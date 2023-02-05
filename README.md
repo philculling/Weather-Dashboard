@@ -6,11 +6,11 @@ Michal pointed out that we would actually need a third query, as the second one 
 
 If you need a break, read the blog on API keys. Anthony sent this and it's copied below.
 As you get to each new section, break it down further.
-Bear in mind that if you inspect the html, it's not as empty as it looks, I think the structure may possibly be there already. Use this to your advantage.
 
 FREQUENT TESTS, FREQUENT COMMITS!
-Repeat the process of getting data from API call to screen.
-Interrogate for 5 days of data as you did for the one day of data. Look for where to find the data we need, which is the date (hopefully not if you're going to use moment), an icon, the temperature and the humidity for the next 5 days.
+Append, inc. getting the date in. Do day 1 only.
+Commit.
+Append days 2 to 5.
 Work out how best to display this data for each of the next 5 days, e.g., maybe, give those cards you created ids, add text content, append.
 
 Do a few things that hopefully will be relatively easy:

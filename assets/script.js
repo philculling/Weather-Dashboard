@@ -37,24 +37,25 @@ $("#search-button").on("click", function(event) {
     var temp = (response.list[0].main.temp - 273.15).toFixed(0);
     var humidity = response.list[0].main.humidity;
     var windSpeed = response.list[0].wind.speed;
-
+    
     //testing variables
     console.log (cityName);
     console.log (date);
     console.log (icon);
-    /*
-    I nearly cracked this before it was time to go.
-    See the website. It has a url that includes the code for the icon within it.
-    I think you need to create another variable called something like
-    iconURL, which you create by concatenating part of that url from their
-    website and insering variable icon into it?
-    */
+    var iconURL = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
+    console.log (iconURL);
+    iconDisplay = $("<img>");
+    iconDisplay.attr("src",iconURL);
+    console.log (iconDisplay);
     console.log (temp);
     console.log (humidity);
     console.log (windSpeed);
 
-    $("#today").append(cityName + " " + date + " " + icon + "<br/>" + "Temperature: "
-     + temp + "<br/>" + "Humidity: " + humidity + "<br/>" + "Wind Speed: " + windSpeed);
+    $("#today").append(iconDisplay);
+
+    $("#today").append(cityName + " " + date + " " + "<br/>" + "Temperature: "
+     + temp + "°C" + "<br/>" + "Humidity: " + humidity + "%" + "<br/>" + 
+     "Wind Speed: " + windSpeed + "KPH");
     
     })
 })

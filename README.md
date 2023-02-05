@@ -9,21 +9,17 @@ As you get to each new section, break it down further.
 Bear in mind that if you inspect the html, it's not as empty as it looks, I think the structure may possibly be there already. Use this to your advantage.
 
 FREQUENT TESTS, FREQUENT COMMITS!
-The html for the 5-day forecast section is a section with id forecast. That's it.
-Maybe insert 5 Bootstrap cards?
-Look up Bootstrap cards.
-Coffee.
-If you do add cards, immediately commit.
+Commit: changed date from being taken from API to using moment so we can display in correct format
+Using moment.js, create variables for dates of the next 5 days.
+Test by console logging. It it's worked, commit again.
 
 Repeat the process of getting data from API call to screen.
-Interrogate for 5 days of data as you did for the one day of data. Look for where to find the data we need, which is the date, an icon, the temperature and the humidity for the next 5 days.
-Work out how best to display this data for each of the next 5 days, e.g. create a div, add text content, append it somewhere.
-On this occasion it probably would be a good idea to use a table, or revise Bootstrap cards.
+Interrogate for 5 days of data as you did for the one day of data. Look for where to find the data we need, which is the date (hopefully not if you're going to use moment), an icon, the temperature and the humidity for the next 5 days.
+Work out how best to display this data for each of the next 5 days, e.g., maybe, give those cards you created ids, add text content, append.
 
 Do a few things that hopefully will be relatively easy:
 - give the top div a border
 - make the search a button
-- change the date in the top div from not being taken from API, but from moment.js then you can format it the way you want
 
 Work out a way of also taking the userinput and it becoming a button below. We did something VERY similar earlier in the week with entering the name of a film into an input box then it became a button we could click on later. There is a div with the id history already set up for this.
 It will need to be a clickable button but this may not necessarily be the best point in the task to tackle that.

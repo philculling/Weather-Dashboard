@@ -32,7 +32,11 @@ $("#search-button").on("click", function(event) {
     //storing all variables we need to be taken from the data
     var cityName = response.city.name;
     //do we really need this if we already have variable city?! I did it anyway.
-    var date = response.list[0].dt_txt;
+    //var date = response.list[0].dt_txt; no longer using
+    //create variable for current date using moment.js as I want to display it differently.
+    var today = moment();
+    $("#today").text(today.format("DD/MM/YY"));
+
     var icon = response.list[0].weather[0].icon;
     var temp = (response.list[0].main.temp - 273.15).toFixed(0);
     var humidity = response.list[0].main.humidity;
@@ -40,7 +44,7 @@ $("#search-button").on("click", function(event) {
     
     //testing variables
     console.log (cityName);
-    console.log (date);
+//    console.log (date); no longer using
     console.log (icon);
     var iconURL = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
     console.log (iconURL);
@@ -53,7 +57,7 @@ $("#search-button").on("click", function(event) {
 
     $("#today").append(iconDisplay);
 
-    $("#today").append(cityName + " " + date + " " + "<br/>" + "Temperature: "
+    $("#today").append(cityName + "<br/>" + "Temperature: "
      + temp + "°C" + "<br/>" + "Humidity: " + humidity + "%" + "<br/>" + 
      "Wind Speed: " + windSpeed + "KPH");
     

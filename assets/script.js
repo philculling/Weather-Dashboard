@@ -8,7 +8,6 @@ function setItems() {
 //The array, cities, as it stands, should now be stored in local storage.
 console.log(cities);
 
-
 var mostRecentArray = localStorage.getItem("mostRecentArray");
 console.log(mostRecentArray);
 
@@ -33,28 +32,28 @@ function renderButtons() {
     a.text(cities[i]);
     $("#history").append(a);
     }
+    //I have already tried the clear previous content code here
  }
 
 $("#search-button").on("click", function(event) {
     event.preventDefault();
     console.log ("my event listener code is correct");
     setItems();
-    
-    //clear previous content at this point
-    $("#today").empty;
-    $("#todayPlusOne").empty;
-    $("#todayPlusTwo").empty;
-    $("#todayPlusThree").empty;
-    $("#todayPlusFour").empty;
-    $("#todayPlusFive").empty;
-    /*
-    Weird. Emptying #today works every time. Emptying the lower section is not,
-    whatever I'm trying, like by class card-body, or individually by section.
-    */
-    
-  var city = $("#search-input").val().trim();
-  console.log(city);
 
+//clear previous content at this point
+$("#today").empty;
+$("#todayPlusOne").empty;
+$("#todayPlusTwo").empty;
+$("#todayPlusThree").empty;
+$("#todayPlusFour").empty;
+$("#todayPlusFive").empty;
+/*
+Weird. Emptying #today works every time. Emptying the lower section is not,
+whatever I'm trying, like by class card-body, or individually by section.
+*/
+
+  var city = $("#search-input").val().trim();
+    console.log(city);
     cities.push(city);
     renderButtons();
 
@@ -80,6 +79,9 @@ $("#search-button").on("click", function(event) {
         url: queryURLGeo,
         method: "GET"
     }).then(function(response) {
+    
+      //I have tried putting the clearing code here
+
     //storing all variables we need to be taken from the data for day 1
     var cityName = response.city.name;
     //do we really need this if we already have variable city?! I did it anyway.
@@ -132,8 +134,11 @@ $("#search-button").on("click", function(event) {
     iconDisplaytodayPlusOne = $("<img>");
     iconDisplaytodayPlusOne.attr("src",iconURLtodayPlusOne);
 
-    //add date, icon and data to correct box day 1 (need to create id first)
-    $("#todayPlusOne").empty;
+    //add date, icon and data to correct box day 1
+    $("#forecast").empty;//not working
+    $("#todayPlusOne").empty;//not working
+    $(".card-body").empty;//not working. Trying everything here...
+    //Is it in fact clearing but adding it back, adding York then Moscow?
     $("#todayPlusOne").append(todayPlusOne);
     $("#todayPlusOne").append(iconDisplaytodayPlusOne);
     $("#todayPlusOne").append("Temperature: " + temptodayPlusOne + "°C" + "<br/>" 
@@ -222,6 +227,7 @@ storage issue, you could use that?
 */
 $("#history").on('click', function (event) {
       console.log("Testing event listener");//works
+      console.log(this);//don't know what to do next
       event.preventDefault();
       $("#today").empty;
       $("#todayPlusOne").empty;

@@ -46,10 +46,11 @@ Issues:
 FREQUENT TESTS, FREQUENT COMMITS!
 
 UNRESOLVED ISSUES
-Think about the clearing bit and why that's not working
+Think more about what you need the function to do - the one where you click on the history buttons. What we want is for the function(event) which is currently at line 38, to re-run but with the word in the button replacing the user input. That sounds easy. Identify the word in the button and we're there, surely?! The word in the button is ?
 
-Think more about what you need the function to do - the one where you click on the history buttons.
 Devising a function for clicking on the history buttons and a correct, adapted function being called which works.
+Think about the clearing bit and why that's not working. Perhaps you ARE clearing successfully but inadvertently adding back in again.
+
 Function getItems to take the array back from local storage.
 Make sure getItems is triggered when it needs to be.
 Styling:

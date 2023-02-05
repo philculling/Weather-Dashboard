@@ -2,6 +2,18 @@ console.log (1 + 2);//tested links ok, is fine.
 
 var cities = [];
 
+function setItems() {
+  localStorage.setItem("mostRecentArray", cities);
+}
+console.log(cities);
+/*
+function getItems() {
+  cities = localStorage.getItem("mostRecentArray");
+}
+
+getItems();
+*/
+
 function renderButtons() {
   $("#history").empty();
   for (i = 0; i < cities.length; i++) {
@@ -16,6 +28,7 @@ function renderButtons() {
 $("#search-button").on("click", function(event) {
     event.preventDefault();
     console.log ("my event listener code is correct");
+    setItems();
     
     //clear previous content at this point
     $("#today").empty;
@@ -195,6 +208,8 @@ But I'm getting v confused, going round in circles!
 Could we give each history button a data attribute, which is the city name
 then retrieve the city name using data attribute
 and run the function again using an updated city name?
+OR could this be a complete red herring, and once you've sorted the local 
+storage issue, you could use that?
 */
 $("#history").on('click', function (event) {
       console.log("Testing event listener");//works

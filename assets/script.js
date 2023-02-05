@@ -1,11 +1,27 @@
 console.log (1 + 2);//tested links ok, is fine.
 
+var cities = [];
+
+function renderButtons() {
+  $("#history").empty();
+  for (i = 0; i < cities.length; i++) {
+    //for each one, add a button  
+    var a = $("<button>");
+    //for each one, make sure it has the text from the array
+    a.text(cities[i]);
+    $("#history").append(a);
+    }
+ }
+
 $("#search-button").on("click", function(event) {
     event.preventDefault();
     console.log ("my event listener code is correct");
     
   var city = $("#search-input").val().trim();
   console.log(city);
+
+    cities.push(city);
+    renderButtons();
 
   var queryURLCity = "http://api.openweathermap.org/geo/1.0/direct?q=" + city + "&limit=1&appid=bb192fe9bf9d6707169935aa00429800";
   console.log (queryURLCity);
@@ -152,3 +168,7 @@ $("#search-button").on("click", function(event) {
     })
 })
 });
+
+ //Calling the renderButtons function to display the list of cities
+ //that will be taken from local storage
+ renderButtons();

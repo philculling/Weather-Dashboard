@@ -8,23 +8,22 @@ Things to ask tutor:
 Why is my styling not completely working? Although I used a workaround.
 
 FREQUENT TESTS, FREQUENT COMMITS!
-Give the top div a border.
-Make the search a button.
-Commit.
 
-Work out a way of also taking the userinput and it becoming a button below. We did something VERY similar earlier in the week with entering the name of a film into an input box then it became a button we could click on later. There is a div with the id history already set up for this.
-It will need to be a clickable button but this may not necessarily be the best point in the task to tackle that.
+Work out a way of taking the userinput and it becoming a button below. We did something VERY similar earlier in the week with entering the name of a film into an input box then it became a button we could click on later. There is a div with the id history already set up for this.
+Commit and break.
+
+Do a little more work on the main function, so that when called it clears what was there and updates with the new search / city / userinput.
+
+Work out a way that clicking on the history buttons will run the function again.
 
 Check the API documentation in case Michal is right and it needs a separate query for 1 day and forecast. It shouldn't be too hard to change if it does.
 
 Work out a way of storing those buttons (previous searches) into local storage. You managed this really successfully in Week 7 challenge so go there as a starting point.
 
-Work out a way that clicking on those buttons will run the function again.
-
-Do a little more work on the main function, so that when called it clears what was there and updates with the new search / city / userinput.
-
-See if you can adapt the way the date is displayed using moment. Maybe instead of taking the dates from the API, we just use moment.js?
-Styling, including the search button.
+Styling:
+Look up how to add a border, as you may have forgotten!
+Give the top div a border.
+Make the search area more clearly a button.
 README.
  
 MY NOTES FINISH HERE

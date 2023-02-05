@@ -6,12 +6,18 @@ function setItems() {
   localStorage.setItem("mostRecentArray", cities);
 }
 console.log(cities);
+
 /*
-function getItems() {
-  cities = localStorage.getItem("mostRecentArray");
-}
+var mostRecentArray = localStorage.getItem("mostRecentArray");
 
 getItems();
+
+function getItems() {
+cities = mostRecentArray;
+}
+
+//hoping that would update the locally stored most recent array to our
+//cities array, but it wasn't working in the way I expected
 */
 
 function renderButtons() {
@@ -179,7 +185,6 @@ $("#search-button").on("click", function(event) {
      $("#todayPlusFour").css("background-color", "aquamarine");
          
     //variables for forecast day 5
-
     var icontodayPlusFive = response.list[39].weather[0].icon;
     var temptodayPlusFive = (response.list[39].main.temp - 273.15).toFixed(0);
     var humiditytodayPlusFive = response.list[39].main.humidity;
@@ -213,6 +218,7 @@ storage issue, you could use that?
 */
 $("#history").on('click', function (event) {
       console.log("Testing event listener");//works
+      event.preventDefault();
       $("#today").empty;
       $("#todayPlusOne").empty;
       $("#todayPlusTwo").empty;

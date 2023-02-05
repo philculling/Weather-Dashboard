@@ -46,7 +46,7 @@ Issues:
 FREQUENT TESTS, FREQUENT COMMITS!
 
 UNRESOLVED ISSUES
-Clicking on the history buttons and it working ok.
+Devising a function for clicking on the history buttons and a correct, adapted function being called which works.
 Function getItems to take the array back from local storage.
 Make sure getItems is triggered when it needs to be.
 Styling:

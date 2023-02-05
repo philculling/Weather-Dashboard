@@ -1,24 +1,21 @@
 # Weather-Dashboard
 Week 8 Challenge
 
-3 API requests.
-Michal pointed out that we would actually need a third query, as the second one would be for the one day forecast, and the third one would be for the 5 day forecast. I'm not sure this is necessarily true, there are 5 days' worth of data in the return I've already done.
-
 If you need a break, read the blog on API keys. Anthony sent this and it's copied below.
 As you get to each new section, break it down further.
 
 FREQUENT TESTS, FREQUENT COMMITS!
-Append, inc. getting the date in. Do day 1 only.
 Commit.
-Append days 2 to 5.
-Work out how best to display this data for each of the next 5 days, e.g., maybe, give those cards you created ids, add text content, append.
-
-Do a few things that hopefully will be relatively easy:
-- give the top div a border
-- make the search a button
+Do a tiny bit of styling, then commit.
+Give them all a background color because at the moment, you can't see the icons very clearly.
+Give the top div a border.
+Make the search a button.
 
 Work out a way of also taking the userinput and it becoming a button below. We did something VERY similar earlier in the week with entering the name of a film into an input box then it became a button we could click on later. There is a div with the id history already set up for this.
 It will need to be a clickable button but this may not necessarily be the best point in the task to tackle that.
+
+Check the API documentation in case Michal is right and it needs a separate query for 1 day and forecast. It shouldn't be too hard to change if it does.
+
 Work out a way of storing those buttons (previous searches) into local storage. You managed this really successfully in Week 7 challenge so go there as a starting point.
 
 Work out a way that clicking on those buttons will run the function again.

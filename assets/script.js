@@ -70,9 +70,9 @@ $("#search-button").on("click", function(event) {
      "Wind Speed: " + windSpeed + "KPH");
 
     //variables for forecast day 1
-    var icontodayPlusOne = response.list[8].weather[0].icon;
-    var temptodayPlusOne = (response.list[8].main.temp - 273.15).toFixed(0);
-    var humiditytodayPlusOne = response.list[8].main.humidity;
+    var icontodayPlusOne = response.list[7].weather[0].icon;
+    var temptodayPlusOne = (response.list[7].main.temp - 273.15).toFixed(0);
+    var humiditytodayPlusOne = response.list[7].main.humidity;
     //tests
     console.log (icontodayPlusOne);
     console.log (temptodayPlusOne);
@@ -81,40 +81,69 @@ $("#search-button").on("click", function(event) {
     iconDisplaytodayPlusOne = $("<img>");
     iconDisplaytodayPlusOne.attr("src",iconURLtodayPlusOne);
 
-    //variables for forecast days 2-5
-    var icontodayPlusTwo = response.list[16].weather[0].icon;
-    var temptodayPlusTwo = (response.list[16].main.temp - 273.15).toFixed(0);
-    var humiditytodayPlusTwo = response.list[16].main.humidity;
+    //add date, icon and data to correct box day 1 (need to create id first)
+    $("#todayPlusOne").append(todayPlusOne);
+    $("#todayPlusOne").append(iconDisplaytodayPlusOne);
+    $("#todayPlusOne").append("Temperature: " + temptodayPlusOne + "°C" + "<br/>" 
+    + "Humidity: " + humiditytodayPlusOne + "%");
+        
+    //variables for forecast day 2
+    var icontodayPlusTwo = response.list[15].weather[0].icon;
+    var temptodayPlusTwo = (response.list[15].main.temp - 273.15).toFixed(0);
+    var humiditytodayPlusTwo = response.list[15].main.humidity;
     var iconURLtodayPlusTwo = "http://openweathermap.org/img/wn/" + icontodayPlusTwo + "@2x.png";
     iconDisplaytodayPlusTwo = $("<img>");
     iconDisplaytodayPlusTwo.attr("src",iconURLtodayPlusTwo);
-
-    var icontodayPlusThree = response.list[24].weather[0].icon;
-    var temptodayPlusThree = (response.list[24].main.temp - 273.15).toFixed(0);
-    var humiditytodayPlusThree = response.list[24].main.humidity;
+    
+    //add date, icon and data to correct box day 2
+    $("#todayPlusTwo").append(todayPlusTwo);
+    $("#todayPlusTwo").append(iconDisplaytodayPlusTwo);
+    $("#todayPlusTwo").append("Temperature: " + temptodayPlusTwo + "°C" + "<br/>" 
+    + "Humidity: " + humiditytodayPlusTwo + "%");
+        
+    //variables for forecast day 3
+    var icontodayPlusThree = response.list[23].weather[0].icon;
+    var temptodayPlusThree = (response.list[23].main.temp - 273.15).toFixed(0);
+    var humiditytodayPlusThree = response.list[23].main.humidity;
     var iconURLtodayPlusThree = "http://openweathermap.org/img/wn/" + icontodayPlusThree + "@2x.png";
     iconDisplaytodayPlusThree = $("<img>");
     iconDisplaytodayPlusThree.attr("src",iconURLtodayPlusThree);
-
-    var icontodayPlusFour = response.list[32].weather[0].icon;
-    var temptodayPlusFour = (response.list[32].main.temp - 273.15).toFixed(0);
-    var humiditytodayPlusFour = response.list[32].main.humidity;
+    
+    //add date, icon and data to correct box day 3
+    $("#todayPlusThree").append(todayPlusThree);
+    $("#todayPlusThree").append(iconDisplaytodayPlusThree);
+    $("#todayPlusThree").append("Temperature: " + temptodayPlusThree + "°C" + "<br/>" 
+    + "Humidity: " + humiditytodayPlusThree + "%");
+        
+    //variables for forecast day 4
+    var icontodayPlusFour = response.list[31].weather[0].icon;
+    var temptodayPlusFour = (response.list[31].main.temp - 273.15).toFixed(0);
+    var humiditytodayPlusFour = response.list[31].main.humidity;
     var iconURLtodayPlusFour = "http://openweathermap.org/img/wn/" + icontodayPlusFour + "@2x.png";
     iconDisplaytodayPlusFour = $("<img>");
     iconDisplaytodayPlusFour.attr("src",iconURLtodayPlusFour);
 
-    var icontodayPlusFive = response.list[40].weather[0].icon;
-    var temptodayPlusFive = (response.list[40].main.temp - 273.15).toFixed(0);
-    var humiditytodayPlusFive = response.list[40].main.humidity;
+     //add date, icon and data to correct box day 4
+     $("#todayPlusFour").append(todayPlusFour);
+     $("#todayPlusFour").append(iconDisplaytodayPlusFour);
+     $("#todayPlusFour").append("Temperature: " + temptodayPlusFour + "°C" + "<br/>" 
+     + "Humidity: " + humiditytodayPlusFour + "%");
+         
+    //variables for forecast day 5
+
+    var icontodayPlusFive = response.list[39].weather[0].icon;
+    var temptodayPlusFive = (response.list[39].main.temp - 273.15).toFixed(0);
+    var humiditytodayPlusFive = response.list[39].main.humidity;
     var iconURLtodayPlusFive = "http://openweathermap.org/img/wn/" + icontodayPlusFive + "@2x.png";
     iconDisplaytodayPlusFive = $("<img>");
     iconDisplaytodayPlusFive.attr("src",iconURLtodayPlusFive);
 
-    //date will be obtained using moment
-    //test variables using console log
-    //append text for ONE day only to test
-    //commit
-    
+     //add date, icon and data to correct box day 5
+     $("#todayPlusFive").append(todayPlusFive);
+     $("#todayPlusFive").append(iconDisplaytodayPlusFive);
+     $("#todayPlusFive").append("Temperature: " + temptodayPlusFive + "°C" + "<br/>" 
+     + "Humidity: " + humiditytodayPlusFive + "%");
+             
     })
 })
 });

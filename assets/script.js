@@ -1,35 +1,35 @@
 console.log (1 + 2);//tested links ok, is fine.
 
 var cities = [];
+var jsoncities = JSON.stringify(cities);
 
 function setItems() {
-  localStorage.setItem("mostRecentArray", cities);
+  localStorage.setItem("mostRecentArray", jsoncities);
 }
-//The array, cities, as it stands, should now be stored in local storage.
+//The array, cities, is now stored in local storage as a string.
+//checks
 console.log(cities);
+console.log(jsoncities);
 
-var mostRecentArray = localStorage.getItem("mostRecentArray");
+var mostRecentArray = JSON.parse(localStorage.getItem("mostRecentArray"));
 console.log(mostRecentArray);
 
-/*
-getItems();
-
 function getItems() {
-cities = mostRecentArray;
+cities.push(mostRecentArray);
 }
 
-I was hoping that would update the locally stored most recent array to our
-cities array, but it wasn't working in the way I expected. Is it because
-what we're saving is an array; do we need to parse / stringify?
-*/
+getItems();
+
 
 function renderButtons() {
-  $("#history").empty();
+  $("#history").empty();//to prevent repetition
   for (i = 0; i < cities.length; i++) {
     //for each one, add a button  
     var a = $("<button>");
     //for each one, make sure it has the text from the array
     a.text(cities[i]);
+    //for each one, give it a data-attribute which is the same as its city name
+    a.attr("data-city", cities[i]);//not sure this has worked or how to test
     $("#history").append(a);
     }
     //I have already tried the clear previous content code here
@@ -221,22 +221,44 @@ it was the user input.
 But I'm getting v confused, going round in circles!
 Could we give each history button a data attribute, which is the city name
 then retrieve the city name using data attribute
-and run the function again using an updated city name?
-OR could this be a complete red herring, and once you've sorted the local 
-storage issue, you could use that?
+and run the function again using an updated city name? This is what I've started
+to attempt;
 */
 $("#history").on('click', function (event) {
       console.log("Testing event listener");//works
-      console.log(this);//don't know what to do next
+      console.log(this);//returns div with id history
       event.preventDefault();
       $("#today").empty;
       $("#todayPlusOne").empty;
       $("#todayPlusTwo").empty;
       $("#todayPlusThree").empty;
       $("#todayPlusFour").empty;
-      $("#todayPlusFive").empty;//none of these is working
+      $("#todayPlusFive").empty;//none of these .empty is working
+      //if it goes wrong, delete from here
+      $("#history").each(function() {
+        var clickedHistory = $(this).attr("data-city");
+        console.log(clickedHistory);//returns undefined
+      })
 
 });
+
+/* This was what you used in the last challenge to target by data hour using
+this.
+$(".row").each(function(){
+  var currentHour = parseInt(moment().hour());
+  var rowHour = parseInt($(this).attr("data-hour"));
+  console.log(rowHour);
+  if (rowHour === currentHour) {
+    $(this).addClass("present");
+  }
+  else if (rowHour > currentHour) {
+    $(this).addClass("future");
+  }
+  else {
+    $(this).addClass("past");
+  }
+})
+*/
 
  //Calling the renderButtons function to display the list of cities
  //that will be taken from local storage

@@ -30,29 +30,32 @@ Some help was provided by a tutor session.
 ## License
 Please refer to the LICENSE in the repo.
 
-NOTES START HERE
+MY NOTES START HERE
 
 If you need a break, read the blog on API keys. Anthony sent this and it's in the README of the instructions.
 
 Things to ask tutor:
-How to use the event listener on the buttons to update the content.
 Issues:
-1. The function will be almost the same, but the call to the API will be based on the button just clicked not the user input. I need to get this right first before adapting the VERY LONG function.
+How to use the event listener on the history buttons to update the content.
+1. The function will be almost the same, but the call to the API will be based on the button just clicked not the user input. I need to get this right first before adapting (?) the VERY LONG function.
 2. Once sorted, adapt the function.
 3. When I want to clear, it's clearing #today but not #forecast and I don't understand why as they look the same.
-4. setItems is working fine, getItems is not, which is why it's commented out.
+4. setItems and getItems: seems to have no problem with the code but I'm not sure what we're trying to achieve and therefore even less sure if I've achieved it! I don't think previous entries are saving successfully.
 5. Why is my styling not completely working? Although I used a workaround.
 
 FREQUENT TESTS, FREQUENT COMMITS!
 
-UNRESOLVED ISSUES
-Think more about what you need the function to do - the one where you click on the history buttons. What we want is for the function(event) which is currently at line 38, to re-run but with the word in the button replacing the user input. That sounds easy. Identify the word in the button and we're there, surely?! The word in the button is ?
+UNRESOLVED ISSUES / THINGS TO TRY
+Keep trying, in rotation:
 
-Devising a function for clicking on the history buttons and a correct, adapted function being called which works.
-Think about the clearing bit and why that's not working. Perhaps you ARE clearing successfully but inadvertently adding back in again.
+Clearing #forecast
 
-Function getItems to take the array back from local storage.
-Make sure getItems is triggered when it needs to be.
+Getting the new buttons to replace the content when clicked on, so:
+- event listener
+- function, either previous one adapted, or a new one.
+
+If time, correct the queryURL for current weather, you may have done it wrong. See Anthony's blog.
+
 Styling:
 Look up how to add a border, as you may have forgotten!
 Give the top div a border.

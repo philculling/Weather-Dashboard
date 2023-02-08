@@ -32,29 +32,24 @@ Please refer to the LICENSE in the repo.
 
 MY NOTES START HERE
 
-If you need a break, read the blog on API keys. Anthony sent this and it's in the README of the instructions.
-
 Things to ask tutor:
 Issues:
 How to use the event listener on the history buttons to update the content.
 1. The function will be almost the same, but the call to the API will be based on the button just clicked not the user input. I need to get this right first before adapting (?) the VERY LONG function.
 2. Once sorted, adapt the function.
-3. When I want to clear, it's clearing #today but not #forecast and I don't understand why as they look the same.
-4. setItems and getItems: seems to have no problem with the code but I'm not sure what we're trying to achieve and therefore even less sure if I've achieved it! I don't think previous entries are saving successfully.
-5. Why is my styling not completely working? Although I used a workaround.
+3. setItems and getItems: seems to have no problem with the code but I'm not sure what we're trying to achieve and therefore even less sure if I've achieved it! I don't think previous entries are saving successfully.
+4. Why is my styling not completely working? Although I used a workaround.
 
 FREQUENT TESTS, FREQUENT COMMITS!
 
 UNRESOLVED ISSUES / THINGS TO TRY
 Keep trying, in rotation:
 
-Clearing #forecast
-
 Getting the new buttons to replace the content when clicked on, so:
 - event listener
 - function, either previous one adapted, or a new one.
 
-If time, correct the queryURL for current weather, you may have done it wrong. See Anthony's blog.
+Check how you are creating buttons. There can't be more than one thing with an ID, this might be the problem.
 
 Styling:
 Look up how to add a border, as you may have forgotten!

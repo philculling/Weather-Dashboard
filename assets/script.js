@@ -41,16 +41,12 @@ $("#search-button").on("click", function(event) {
     setItems();
 
 //clear previous content at this point
-$("#today").empty;
-$("#todayPlusOne").empty;
-$("#todayPlusTwo").empty;
-$("#todayPlusThree").empty;
-$("#todayPlusFour").empty;
-$("#todayPlusFive").empty;
-/*
-Weird. Emptying #today works every time. Emptying the lower section is not,
-whatever I'm trying, like by class card-body, or individually by section.
-*/
+$("#today").empty();
+$("#todayPlusOne").empty();
+$("#todayPlusTwo").empty();
+$("#todayPlusThree").empty();
+$("#todayPlusFour").empty();
+$("#todayPlusFive").empty();
 
   var city = $("#search-input").val().trim();
     console.log(city);
@@ -82,6 +78,18 @@ whatever I'm trying, like by class card-body, or individually by section.
     
       //I have tried putting the clearing code here
 
+    //create variable for current date using moment.js as I want to display it differently.
+    var today = moment();
+    $("#today").text(today.format("DD/MM/YY"));
+    //create date variables for next 5 days
+    var todayPlusOne = moment().add(1, 'days').format("DD/MM/YY");
+    //test
+    console.log (todayPlusOne);//worked fine, displayed tomorrow's date
+    var todayPlusTwo = moment().add(2, 'days').format("DD/MM/YY");
+    var todayPlusThree = moment().add(3, 'days').format("DD/MM/YY");
+    var todayPlusFour = moment().add(4, 'days').format("DD/MM/YY");
+    var todayPlusFive = moment().add(5, 'days').format("DD/MM/YY");
+
     //storing all variables we need to be taken from the data for day 1
     var cityName = response.city.name;
     //do we really need this if we already have variable city?! I did it anyway.
@@ -104,18 +112,6 @@ whatever I'm trying, like by class card-body, or individually by section.
     console.log (humidity);
     console.log (windSpeed);
     
-    //create variable for current date using moment.js as I want to display it differently.
-    var today = moment();
-    $("#today").text(today.format("DD/MM/YY"));
-    //create date variables for next 5 days
-    var todayPlusOne = moment().add(1, 'days').format("DD/MM/YY");
-    //test
-    console.log (todayPlusOne);//worked fine, displayed tomorrow's date
-    var todayPlusTwo = moment().add(2, 'days').format("DD/MM/YY");
-    var todayPlusThree = moment().add(3, 'days').format("DD/MM/YY");
-    var todayPlusFour = moment().add(4, 'days').format("DD/MM/YY");
-    var todayPlusFive = moment().add(5, 'days').format("DD/MM/YY");
-
     $("#today").append(iconDisplay);
 
     $("#today").append(cityName + "<br/>" + "Temperature: "
@@ -135,10 +131,7 @@ whatever I'm trying, like by class card-body, or individually by section.
     iconDisplaytodayPlusOne.attr("src",iconURLtodayPlusOne);
 
     //add date, icon and data to correct box day 1
-    $("#forecast").empty;//not working
-    $("#todayPlusOne").empty;//not working
-    $(".card-body").empty;//not working. Trying everything here...
-    //Is it in fact clearing but adding it back, adding York then Moscow?
+    $("#todayPlusOne").empty();
     $("#todayPlusOne").append(todayPlusOne);
     $("#todayPlusOne").append(iconDisplaytodayPlusOne);
     $("#todayPlusOne").append("Temperature: " + temptodayPlusOne + "°C" + "<br/>" 
@@ -154,7 +147,7 @@ whatever I'm trying, like by class card-body, or individually by section.
     iconDisplaytodayPlusTwo.attr("src",iconURLtodayPlusTwo);
     
     //add date, icon and data to correct box day 2
-    $("#todayPlusTwo").empty;
+    $("#todayPlusTwo").empty();
     $("#todayPlusTwo").append(todayPlusTwo);
     $("#todayPlusTwo").append(iconDisplaytodayPlusTwo);
     $("#todayPlusTwo").append("Temperature: " + temptodayPlusTwo + "°C" + "<br/>" 
@@ -170,7 +163,7 @@ whatever I'm trying, like by class card-body, or individually by section.
     iconDisplaytodayPlusThree.attr("src",iconURLtodayPlusThree);
     
     //add date, icon and data to correct box day 3
-    $("#todayPlusThree").empty;
+    $("#todayPlusThree").empty();
     $("#todayPlusThree").append(todayPlusThree);
     $("#todayPlusThree").append(iconDisplaytodayPlusThree);
     $("#todayPlusThree").append("Temperature: " + temptodayPlusThree + "°C" + "<br/>" 
@@ -186,7 +179,7 @@ whatever I'm trying, like by class card-body, or individually by section.
     iconDisplaytodayPlusFour.attr("src",iconURLtodayPlusFour);
 
      //add date, icon and data to correct box day 4
-     $("#todayPlusFour").empty;
+     $("#todayPlusFour").empty();
      $("#todayPlusFour").append(todayPlusFour);
      $("#todayPlusFour").append(iconDisplaytodayPlusFour);
      $("#todayPlusFour").append("Temperature: " + temptodayPlusFour + "°C" + "<br/>" 
@@ -202,7 +195,7 @@ whatever I'm trying, like by class card-body, or individually by section.
     iconDisplaytodayPlusFive.attr("src",iconURLtodayPlusFive);
 
      //add date, icon and data to correct box day 5
-     $("#todayPlusFive").empty;
+     $("#todayPlusFive").empty();
      $("#todayPlusFive").append(todayPlusFive);
      $("#todayPlusFive").append(iconDisplaytodayPlusFive);
      $("#todayPlusFive").append("Temperature: " + temptodayPlusFive + "°C" + "<br/>" 
@@ -228,18 +221,13 @@ $("#history").on('click', function (event) {
       console.log("Testing event listener");//works
       console.log(this);//returns div with id history
       event.preventDefault();
-      $("#today").empty;
-      $("#todayPlusOne").empty;
-      $("#todayPlusTwo").empty;
-      $("#todayPlusThree").empty;
-      $("#todayPlusFour").empty;
-      $("#todayPlusFive").empty;//none of these .empty is working
-      //if it goes wrong, delete from here
-      $("#history").each(function() {
-        var clickedHistory = $(this).attr("data-city");
-        console.log(clickedHistory);//returns undefined
-      })
-
+      $("#today").empty();
+      $("#todayPlusOne").empty();
+      $("#todayPlusTwo").empty();
+      $("#todayPlusThree").empty();
+      $("#todayPlusFour").empty();
+      $("#todayPlusFive").empty();
+     
 });
 
 /* This was what you used in the last challenge to target by data hour using

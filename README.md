@@ -29,30 +29,3 @@ Some help was provided by a tutor session.
 
 ## License
 Please refer to the LICENSE in the repo.
-
-MY NOTES START HERE
-
-Things to ask tutor:
-Issues:
-How to use the event listener on the history buttons to update the content.
-1. The function will be almost the same, but the call to the API will be based on the button just clicked not the user input. I need to get this right first before adapting (?) the VERY LONG function.
-2. Once sorted, adapt the function.
-3. setItems and getItems: seems to have no problem with the code but I'm not sure what we're trying to achieve and therefore even less sure if I've achieved it! I don't think previous entries are saving successfully.
-4. Why is my styling not completely working? Although I used a workaround.
-
-FREQUENT TESTS, FREQUENT COMMITS!
-
-UNRESOLVED ISSUES / THINGS TO TRY
-Keep trying, in rotation:
-
-Getting the new buttons to replace the content when clicked on, so:
-- event listener
-- function, either previous one adapted, or a new one.
-
-Check how you are creating buttons. There can't be more than one thing with an ID, this might be the problem.
-
-Styling:
-Look up how to add a border, as you may have forgotten!
-Give the top div a border.
-
-MY NOTES FINISH HERE

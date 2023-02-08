@@ -32,7 +32,7 @@ function historySearch() {
   renderWeather(searchCity);
 }
 
-function renderWeather(cityInput) {
+function renderWeather(searchCity) {
 
   console.log("my event listener code is correct");
   setItems();
@@ -45,7 +45,7 @@ function renderWeather(cityInput) {
   $("#todayPlusFour").empty();
   $("#todayPlusFive").empty();
 
-  var city = $("#search-input").val().trim() || cityInput;
+  var city = $("#search-input").val().trim() || searchCity;
   console.log(city);
   cities.push(city);
   renderButtons();

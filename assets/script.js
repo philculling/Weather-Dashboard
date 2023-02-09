@@ -29,7 +29,7 @@ function historySearch() {
   console.log(this);
   var searchCity = $(this).attr("data-city");
   console.log(searchCity);
-  renderWeather(searchCity);
+  renderWeatherFromHistory(searchCity);
 }
 
 function renderWeather() {
@@ -199,13 +199,10 @@ function renderWeather() {
     })
   })
 }
-/*
 
-function renderWeather(searchCity) {
+function renderWeatherFromHistory(searchCity) {
 
   console.log("my event listener code is correct");
-  setItems();
-
   //clear previous content at this point
   $("#today").empty();
   $("#todayPlusOne").empty();
@@ -214,10 +211,9 @@ function renderWeather(searchCity) {
   $("#todayPlusFour").empty();
   $("#todayPlusFive").empty();
 
-  var city = $("#search-input").val().trim() || searchCity;
+  var city = searchCity;
   console.log(city);
   cities.push(city);
-  renderButtons();
 
   var queryURLCity = "http://api.openweathermap.org/geo/1.0/direct?q=" + city + "&limit=1&appid=bb192fe9bf9d6707169935aa00429800";
   console.log(queryURLCity);
@@ -241,7 +237,6 @@ function renderWeather(searchCity) {
       url: queryURLGeo,
       method: "GET"
     }).then(function (response) {
-
 
       //create variable for current date using moment.js as I want to display it in a specific way.
       var today = moment();
@@ -368,9 +363,9 @@ function renderWeather(searchCity) {
     })
   })
 }
-*/
+
 $("#search-button").on("click", renderWeather);
 
 //Calling the renderButtons function to display the list of cities
 //that will be taken from local storage
-renderButtons();
+//renderButtons();

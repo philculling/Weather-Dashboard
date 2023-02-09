@@ -3,6 +3,7 @@ console.log(1 + 2);//tested links ok, is fine.
 var cities = JSON.parse(localStorage.getItem("mostRecentArray")) || [];
 
 function setItems() {
+  
   var citytext = $("#search-input").val().trim();
   if (citytext !== "") {
     cities.push(citytext);
@@ -20,7 +21,8 @@ function renderButtons() {
     a.text(cityHistory[i]);
     //for each one, give it a data-attribute which is the same as its city name
     a.attr("data-city", cityHistory[i]);
-    a.on("click", historySearch)
+    a.on("click", historySearch);
+    console.log(cities);
     $("#history").append(a);
   }
 }
@@ -367,5 +369,5 @@ function renderWeatherFromHistory(searchCity) {
 $("#search-button").on("click", renderWeather);
 
 //Calling the renderButtons function to display the list of cities
-//that will be taken from local storage
+//that will be taken from local storage; commented out, not sure if needed
 //renderButtons();

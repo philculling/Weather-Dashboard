@@ -29,11 +29,3 @@ Some help was provided by a tutor session.
 
 ## License
 Please refer to the LICENSE in the repo.
-
-Rename the function you've copied to be something approproate to clicking on the history buttons.
-Adapt it so it works. Hopefully. This will be the hard bit.
-Commit.
-Remove all this stuff!
-Push.
-Deploy.
-Submit.

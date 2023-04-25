@@ -108,9 +108,10 @@ function renderWeather() {
       console.log(humidity);
       console.log(windSpeed);
 
+      $("#today").append("<br/>" + cityName);
       $("#today").append(iconDisplay);
 
-      $("#today").append(cityName + "<br/>" + "Temperature: "
+      $("#today").append("<br/>" + "Temperature: "
         + temp + "°C" + "<br/>" + "Humidity: " + humidity + "%" + "<br/>" +
         "Wind Speed: " + windSpeed + "KPH");
 
